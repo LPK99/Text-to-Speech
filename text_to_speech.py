@@ -1,4 +1,5 @@
 from gtts import gTTS
+import img_to_text
   
 # This module is imported so that we can 
 # play the converted audio
@@ -6,7 +7,7 @@ import os
 
   
 # The text that you want to convert to audio
-mytext = input("say something")
+mytext = img_to_text.text
   
 # Language in which you want to convert
 language = 'en'
