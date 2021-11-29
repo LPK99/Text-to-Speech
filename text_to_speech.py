@@ -7,20 +7,24 @@ import os
 
   
 # The text that you want to convert to audio
-mytext = img_to_text.text
+
   
 # Language in which you want to convert
 language = 'en'
-  
+def change_to_speech(x):
+    myobj = gTTS(text=x, lang=language, slow=False)
+    myobj.save("welcome.mp3")
+
 # Passing the text and language to the engine, 
 # here we have marked slow=False. Which tells 
 # the module that the converted audio should 
 # have a high speed
-myobj = gTTS(text=mytext, lang=language, slow=False)
+#myobj = gTTS(text=mytext, lang=language, slow=False)
   
 # Saving the converted audio in a mp3 file named
 # welcome 
-myobj.save("welcome.mp3")
+#myobj.save("welcome.mp3")
   
 # Playing the converted file
-os.system("welcome.mp3")
+def play_the_speech():
+    os.system("welcome.mp3")

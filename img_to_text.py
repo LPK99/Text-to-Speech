@@ -7,15 +7,22 @@ path_to_tesseract = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 image_path = r"csv\sample_text.png"
   
 # Opening the image & storing it in an image object
-img = Image.open('sample4.jpg')
+#img = Image.open('sample4.jpg')
   
 # Providing the tesseract executable
 # location to pytesseract library
-pytesseract.tesseract_cmd = path_to_tesseract
+#pytesseract.tesseract_cmd = path_to_tesseract
   
 # Passing the image object to image_to_string() function
 # This function will extract the text from the image
-text = pytesseract.image_to_string(img)
+#text = pytesseract.image_to_string(img)
   
 # Displaying the extracted text
-print(text)
+#print(text)
+
+def  change_to_text(a):
+    img = Image.open(a)
+    pytesseract.tesseract_cmd = path_to_tesseract
+    text = pytesseract.image_to_string(img)
+    return text
+
